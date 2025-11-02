@@ -32,9 +32,9 @@ export default function Cart() {
                 <div className='cart-title cart-items'>
                   <img src={item.image} alt="" />
                   <p>{item.name}</p>
-                  <p>${item.price}</p>
+                  <p>₹{item.price}</p>
                   <p>{cartItems[item._id]}</p>
-                  <p>${item.price * cartItems[item._id]}</p>
+                  <p>₹{item.price * cartItems[item._id]}</p>
                   <p onClick={() => removeToCard(item._id)} className='cross'>x</p>
                 </div>
                 <hr />
@@ -49,17 +49,17 @@ export default function Cart() {
           <div>
             <div className="total-detail">
               <p>Subtotal</p>
-              <p>${getTotalCartAmount()}</p>
+              <p>₹{getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="total-detail">
               <p>Delivery fee</p>
-              <p>${getTotalCartAmount() ? 8 : 0}</p>
+              <p>₹{getTotalCartAmount() ? 50 : 0}</p>
             </div>
             <hr />
             <div className="total-detail">
               <b>Total</b>
-              <b>${getTotalCartAmount() ? getTotalCartAmount() + 8 : 0}</b>
+              <b>₹{getTotalCartAmount() ? getTotalCartAmount() + 50 : 0}</b>
             </div>
           </div>
 

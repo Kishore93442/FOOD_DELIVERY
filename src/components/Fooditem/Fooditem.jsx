@@ -28,7 +28,7 @@ export default function Fooditem({ id, name, price, description, image }) {
           <img src={assets.rating_starts} alt="" />
         </div>
         <p className='descrip'>{description}</p>
-        <p className="price">${price}</p>
+        <p className="price">₹{price}</p>
       </div>
     </div>
   )
